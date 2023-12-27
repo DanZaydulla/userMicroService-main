@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8082
 
 spring:
   datasource:
@@ -13,5 +13,5 @@ spring:
     console:
       enabled: true
 
-answers_service:
+poll_Micro_Service:
   url: "http://localhost:8081"

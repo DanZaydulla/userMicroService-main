@@ -13,5 +13,5 @@ spring:
     console:
       enabled: true
 
-poll_Micro_Service:
+poll_micro_service:
   url: "http://localhost:8081"

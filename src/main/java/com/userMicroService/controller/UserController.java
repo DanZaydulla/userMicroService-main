@@ -1,5 +1,7 @@
 package com.userMicroService.controller;
 
+import com.userMicroService.api.AnswersById;
+import com.userMicroService.api.AnswersService;
 import com.userMicroService.model.UserModel;
 import com.userMicroService.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,7 @@ public class UserController {
     private UserService userService;
 
 
+
     @PostMapping
     public String createUser(@RequestBody UserModel userModel) {
         return userService.createUser(userModel);
@@ -20,6 +23,7 @@ public class UserController {
 
     @DeleteMapping("/{userId}")
     public String deleteUserById(@PathVariable int userId) {
+
         return userService.deleteUserById(userId);
     }
 

@@ -14,7 +14,6 @@ public class UserRepositoryImpl implements UserRepository {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-
     @Override
     public String createUser(UserModel userModel) {
         String sql = "INSERT INTO " + Constants.USER_TABLE_NAME + " (first_name, last_name, email, address, join_date) VALUES(?,?,?,?,?)";

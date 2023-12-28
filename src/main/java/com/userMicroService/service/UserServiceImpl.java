@@ -1,5 +1,6 @@
 package com.userMicroService.service;
 
+import com.userMicroService.api.AnswersService;
 import com.userMicroService.model.UserModel;
 import com.userMicroService.repository.UserRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepositoryImpl customerRepository;
+
 
     @Override
     public String createUser(UserModel userModel) {
@@ -23,9 +25,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public String deleteUserById(int userId) {
-        return customerRepository.deleteUserById(userId);
-
-    }
+        return customerRepository.deleteUserById(userId);}
 
     @Override
     public UserModel getUserById(int userId) {

@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/answers")
-public class AnswersController {
+public class AnswersController  {
 
     @Autowired
     private AnswersService answersService;
@@ -22,8 +22,8 @@ public class AnswersController {
     }
 
     @DeleteMapping("/delete_by_id/{userId}")
-    public String deleteUserById(@PathVariable int userId) {
-        return userService.deleteUserById(userId);
+    public String deleteAnswersByUserId(@PathVariable int userId) {
+        return answersService.deleteAnswersByUserId(userId);
     }
     }
 

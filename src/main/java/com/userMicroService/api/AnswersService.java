@@ -14,9 +14,11 @@ import java.util.List;
 )
 public interface AnswersService {
 
-    @GetMapping(path = "/answer/by_user_id")
-    List<AnswersById> getAnswersByUserId(@RequestParam int userId);
 
-    @DeleteMapping("/answer/{userId}")
+    @GetMapping(value = "/answer/by_user_id/{userId}")
+    public List<AnswersById> getAnswersByUserId(@PathVariable int userId);
+
+    @DeleteMapping("/answer/delete_answers_by_user_id/{userId}")
     String deleteAnswersByUserId(@PathVariable int userId);
+
 }

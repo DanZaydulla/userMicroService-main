@@ -1,6 +1,6 @@
 package com.userMicroService.api;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 public class AnswersById {
 

@@ -1,7 +1,6 @@
 package com.userMicroService.controller;
 
-import com.userMicroService.api.AnswersById;
-import com.userMicroService.api.AnswersService;
+
 import com.userMicroService.model.UserModel;
 import com.userMicroService.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

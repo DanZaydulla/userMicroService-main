@@ -15,10 +15,14 @@ import java.util.List;
 public interface AnswersService {
 
 
-    @GetMapping(value = "/answer/by_user_id/{userId}")
-    public List<AnswersById> getAnswersByUserId(@PathVariable int userId);
+    @GetMapping(path= "/answer/by_user_id/{userId}")
+    List<AnswersById> getAnswersByUserId(@PathVariable int userId);
 
-    @DeleteMapping("/answer/delete_answers_by_user_id/{userId}")
+    @DeleteMapping(path= "/answer/delete_answers_by_user_id/{userId}")
     String deleteAnswersByUserId(@PathVariable int userId);
+    @GetMapping(path = "/answer/users_answered/{questionId}")
+    int getTotalUsersAnsweredForQuestion(@PathVariable int questionId);
 
-}
+    }
+
+

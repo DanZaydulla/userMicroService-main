@@ -21,9 +21,13 @@ public class AnswersController  {
         return answersService.getAnswersByUserId(userId);
     }
 
-    @DeleteMapping("/delete_by_id/{userId}")
+    @DeleteMapping(value = "/delete_by_id/{userId}")
     public String deleteAnswersByUserId(@PathVariable int userId) {
         return answersService.deleteAnswersByUserId(userId);
+    }
+    @GetMapping(value = "/answered/{questionId}")
+    public int getTotalUsersAnsweredForQuestion(@PathVariable int questionId) {
+        return answersService.getTotalUsersAnsweredForQuestion(questionId);
     }
     }
 
